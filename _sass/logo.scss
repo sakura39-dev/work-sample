@@ -1,0 +1,79 @@
+/* ==========================================================================
+   ロゴ・アイコン セクション
+   ========================================================================== */
+.logo-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.logo-item {
+  display: flex;
+  gap: 50px;
+  align-items: center; /* レタッチとは違い、中央揃えにしてロゴと文字のバランスを取る */
+}
+
+/* ロゴの表示枠（50%の幅） */
+.logo-visual {
+  flex: 50;
+  width: 100%;
+}
+
+/* ★最重要：ロゴを引き立てるための、余白のある上品なディスプレイ台紙 */
+.logo-display-box {
+  background-color: #fff; /* 白背景で透過ロゴを綺麗に見せる */
+  border-radius: 12px;
+  padding: 60px 40px;     /* 上下左右にたっぷり余白を取る */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.logo-display-box img {
+  max-width: 80%;         /* 枠いっぱいに広げず、少し小ぶりに置くのがプロっぽく見せるコツ */
+  height: auto;
+  display: block;
+}
+
+/* ロゴ解説エリア（50%の幅） */
+.logo-info {
+  flex: 50;
+}
+
+.logo-info h4 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.logo-meta dt {
+  font-weight: bold;
+  color: var(--color-primary, #557c83);
+  margin-top: 20px;
+  font-size: 0.95rem;
+}
+
+.logo-meta dd {
+  margin-left: 0;
+  margin-top: 6px;
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* 📱 ロゴセクションのスマホ対応 */
+@media (max-width: 768px) {
+  .logo-item {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .logo-display-box {
+    padding: 40px 20px;
+  }
+  .logo-display-box img {
+    max-width: 90%;
+  }
+}

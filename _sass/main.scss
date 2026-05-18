@@ -1,0 +1,172 @@
+/* ==========================================================================
+   Base Styles & Variables (モダンなCSS変数を使用)
+   ========================================================================== */
+:root {
+  --color-primary: #557c83;   /* 落ち着いたブルーグリーン */
+  --color-accent: #f4a261;    /* サーモンピンク（アクセント） */
+  --color-bg: #faf7f2;        /* 優しいベージュ */
+  --color-text: #2b2b2b;
+  --font-base: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", sans-serif;
+  --space-lg: 80px;
+  --space-md: 40px;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-base);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ==========================================================================
+   Layout (レスポンシブ対応の共通コンテナ)
+   ========================================================================== */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: var(--space-lg) 0;
+}
+
+section h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--space-md);
+  position: relative;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: var(--color-primary);
+  margin: 10px auto 0;
+}
+
+/* 共通のセクションタイトル（Works, About など最大の見出し） */
+h2.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+h2.section-title::after {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--color-primary, #557c83);
+  margin: 12px auto 0;
+}
+
+/* 各実績カテゴリーの見出し（Photo Retouch, Web Banners など） */
+h3.works-category-title {
+  font-size: 1.5rem;
+  color: var(--color-primary, #557c83);
+  margin-top: 0;
+  margin-bottom: 30px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* 下に細い線を引いて区切りを明確に */
+}
+
+/* カテゴリーブロックごとの余白 */
+.works-category-block {
+  margin-bottom: 80px; /* カテゴリ同士の間にしっかり余白を開ける */
+}
+.works-category-block:last-child {
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   Grid System (FlexboxやGridを適切に使い分ける)
+   ========================================================================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.skill-card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.skill-card h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+  border-bottom: 2px solid var(--color-bg);
+  padding-bottom: 10px;
+}
+
+.skill-card dt {
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.skill-card dd {
+  margin-left: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+/* フッターの装飾 */
+.site-footer {
+  background-color: #fff;
+  text-align: center;
+  padding: var(--space-md) 0;
+  font-size: 0.85rem;
+  border-top: 1px solid rgba(0,0,0,0.05);
+}
+
+/* heroの装飾 */
+.hero-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 80vh; /* 画面の高さの8割を使ってダイナミックに見せる */
+  background-color: var(--color-bg, #faf7f2); /* 優しいベージュ */
+  text-align: center;
+}
+
+.hero-container {
+  padding: 0 20px;
+}
+
+.hero-tag {
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.2em; /* 文字の間隔を広げて洗練された印象に */
+  color: var(--color-primary, #557c83); /* ブルーグリーン */
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  font-size: clamp(2.5rem, 8vw, 4.5rem); /* 画面幅に合わせて文字サイズが可変するモダンレスポンシブ */
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em; /* 逆に大きな文字は少し詰めると引き締まる */
+  color: #2b2b2b;
+  margin: 0 0 24px 0;
+}
+
+.hero-lead {
+  font-size: 1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}

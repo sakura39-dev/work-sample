@@ -1,0 +1,35 @@
+# ----------------------------------------------------
+# 1. サイトの基本情報
+# ----------------------------------------------------
+title: sakura39-devのポートフォリオ
+description: >- # this means to ignore newlines until "baseurl:"
+  sakura39-devのポートフォリオサイト。
+  Jekyllで作成したGitHub Pagesサイトです。
+
+# ----------------------------------------------------
+# 2. URL・アクセス設定
+# ----------------------------------------------------
+baseurl: "/work-sample"
+url: "https://sakura39-dev.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+
+# ----------------------------------------------------
+# 3. GitHub Pages用ビルド設定（Jekyll 4.x以降の標準）
+# ----------------------------------------------------
+plugins:
+  - jekyll-feed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - Dockerfile
+  - docker-compose.yml

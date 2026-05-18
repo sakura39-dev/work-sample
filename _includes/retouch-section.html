@@ -1,0 +1,52 @@
+<section id="retouch" class="retouch-section">
+  <div class="container">
+    <h3 class="works-category-title">Photo Retouch</h3>
+
+    {% for photo in site.data.retouched-photos %}
+    <div class="retouch-item">
+      
+      <!-- ── 左側：自作スライダーコンテナ ── -->
+      <div class="retouch-visual">
+        <div class="comparison-slider" data-id="{{ photo.id }}">
+          
+          <!-- 加工前の画像 -->
+          <figure class="image-before">
+            <img src="{{ site.baseurl }}/assets/images/{{ photo.img_before }}" alt="{{ photo.title }}（加工前）">
+            <span class="label before-label">Before</span>
+          </figure>
+
+          <!-- 加工後の画像 -->
+          <figure class="image-after">
+            <img src="{{ site.baseurl }}/assets/images/{{ photo.img_after }}" alt="{{ photo.title }}（加工後）">
+            <span class="label after-label">After</span>
+          </figure>
+
+          <!-- 操作用スライダー -->
+          <input type="range" min="0" max="100" value="50" class="slider" aria-label="{{ photo.title }}の比較スライダー">
+          
+          <!-- 仕切り線 -->
+          <div class="slider-line"></div>
+        </div>
+      </div>
+
+      <!-- ── 右側：解説文エリア（追加） ── -->
+      <div class="retouch-info">
+        <span class="category-tag">RETOUCH</span>
+        <h3>{{ photo.title }}</h3>
+        <p class="use-tools">使用ツール：{{ photo.tools }}</p>
+        
+        <ul class="point-list">
+          {% for point in photo.points %}
+          <li>
+            <strong>{{ point.label }}</strong>
+            <p>{{ point.text }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+    </div>
+    {% endfor %}
+
+  </div>
+</section>

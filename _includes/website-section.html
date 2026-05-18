@@ -1,0 +1,37 @@
+<div class="works-category-block">
+  
+  <h3 class="works-category-title">Web Sites</h3>
+
+  {% for site in site.data.websites %}
+  <div class="web-item">
+    
+    <!-- 左側：概要とサイトへのリンクボタン -->
+    <div class="web-visual">
+      <div class="web-link-box">
+        <h4>{{ site.title }}</h4>
+        <p class="web-overview">{{ site.overview }}</p>
+        <p class="use-tools">使用ツール：{{ site.tools }}</p>
+        
+        <!-- 実際のサイトへのリンクボタン -->
+        <a href="{{ site.url }}" target="_blank" rel="noopener" class="btn-visit-site">
+          実際のWebサイトを見る <span>↗</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- 右側：詳細なこだわりポイント -->
+    <div class="web-info">
+      <ul class="point-list">
+        {% for point in site.points %}
+        <li>
+          <strong>{{ point.label }}</strong>
+          <p>{{ point.text }}</p>
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+
+  </div>
+  {% endfor %}
+
+</div>

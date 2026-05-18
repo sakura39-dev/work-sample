@@ -1,0 +1,85 @@
+/* ==========================================================================
+   Webサイト セクション
+   ========================================================================== */
+.web-item {
+  display: flex;
+  gap: 50px;
+  margin-bottom: 60px;
+  align-items: flex-start;
+}
+
+/* 左側：リンクボックス（50%の幅） */
+.web-visual {
+  flex: 50;
+  width: 100%;
+}
+
+.web-link-box {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.web-link-box h4 {
+  font-size: 1.3rem;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.web-overview {
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* サイト訪問ボタンの装飾（テーマカラーのブルーグリーンを想定） */
+.btn-visit-site {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: var(--color-primary, #557c83);
+  color: #fff;
+  text-decoration: none;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 12px rgba(85, 124, 131, 0.2);
+}
+
+.btn-visit-site:hover {
+  background-color: #446369; /* ほんのり暗く */
+  transform: translateY(-2px);
+}
+
+.btn-visit-site span {
+  font-size: 0.8rem;
+}
+
+/* 右側：解説文（50%の幅） */
+.web-info {
+  flex: 50;
+}
+
+/* 📱 Webサイトセクションのスマホ対応 */
+@media (max-width: 768px) {
+  .web-item {
+    flex-direction: column;
+    gap: 30px;
+  }
+  .web-link-box {
+    padding: 30px 20px;
+  }
+  .btn-visit-site {
+    display: flex; /* スマホではボタンを横幅いっぱいに */
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

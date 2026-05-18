@@ -1,0 +1,32 @@
+<div class="works-category-block">
+  
+  <h3 class="works-category-title">Logo & Icon Design</h3>
+
+  <div class="logo-gallery">
+    {% for logo in site.data.logos %}
+    <div class="logo-item">
+      
+      <!-- 左側：ロゴ画像（背景を白や薄いグレーにしてロゴを引き立てる） -->
+      <div class="logo-visual">
+        <div class="logo-display-box">
+          <img src="{{ site.baseurl }}/assets/images/{{ logo.img }}" alt="{{ logo.title }}">
+        </div>
+      </div>
+
+      <!-- 右側：ロゴの解説 -->
+      <div class="logo-info">
+        <h4>{{ logo.title }}</h4>
+        <dl class="logo-meta">
+          <dt>コンセプト</dt>
+          <dd>{{ logo.concept }}</dd>
+          
+          <dt>デザインの意図・こだわり</dt>
+          <dd>{{ logo.points }}</dd>
+        </dl>
+      </div>
+
+    </div>
+    {% endfor %}
+  </div>
+
+</div>

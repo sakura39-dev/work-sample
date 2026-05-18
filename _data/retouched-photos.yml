@@ -1,0 +1,23 @@
+- id: "retouch-sea"
+  title: "観光写真の不要物除去および景観補正レタッチ"
+  img_before: "beach-before.jpg"
+  img_after: "beach-after.jpg"
+  tools: "Photoshop"
+  points:
+    - label: "不要物の自然な除去"
+      text: "背景の人物を「生成塗りつぶし」と「コピースタンプツール」を組み合わせて自然に消去。砂浜の凹凸や波の質感を維持しました。"
+    - label: "パース・角度の補正"
+      text: "傾いていた水平線を修正し、視覚的な安定感を持たせました。"
+    - label: "色調補正"
+      text: "海を不自然ではない程度に鮮やかに。主役であるウミガメはシャドウ部を明るく起こし、甲羅の立体感を引き立てました。"
+
+- id: "retouch-glass"
+  title: "建築写真の遠近パース補正および色調補正レタッチ"
+  img_before: "stained-glass-before.jpg"
+  img_after: "stained-glass-after.jpg"
+  tools: "Photoshop"
+  points:
+    - label: "遠近パースの正確な歪み補正"
+      text: "下から見上げて撮影した台形の歪みを「変形」ツールで補正。正面から正対したような美しいシンメトリー構図に調整しました。"
+    - label: "細部を潰さないトーン補正"
+      text: "トーンカーブを用いて中間調からシャドウを引き上げ、ハイライトの白飛びを抑えつつ、ステンドグラス本来の発色と繊細な模様を視認しやすくしました。"

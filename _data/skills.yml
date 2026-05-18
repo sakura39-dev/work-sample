@@ -1,0 +1,26 @@
+- category: "Design"
+  items:
+    - name: "Photoshop"
+      detail: "商品写真のレタッチ（不要物除去・パース補正）、Webバナー制作"
+    - name: "Figma"
+      detail: "Webサイトのワイヤーフレーム作成、デザインカンプ設計"
+    - name: "Illustrator"
+      detail: "ブランドロゴ・アイコンのベクターデータ制作"
+
+- category: "Frontend & CMS"
+  items:
+    - name: "HTML5 / CSS3 / JavaScript"
+      detail: "レスポンス対応、保守性の高い手書きマークアップ、動的ギミックの実装"
+    - name: "React"
+      detail: "Webシステム開発におけるコンポーネントベースのUI実装経験"
+    - name: "WordPress / Jekyll"
+      detail: "WordPressでのサイト構築・カスタマイズ経験。Jekyllを用いた静的サイトのデータ管理と運用効率化"
+
+- category: "Backend & Dev Tools"
+  items:
+    - name: "PHP / Ruby / Go"
+      detail: "Laravel, CakePHP, FuelPHP / Ruby on Rails / gin を用いたWebシステム開発の実務経験"
+    - name: "Git / GitHub"
+      detail: "Gitによるバージョン管理、GitHub Pagesを用いたサイト公開・運用管理"
+    - name: "Docker / VS Code"
+      detail: "Dockerコンテナを用いたローカル開発環境の構築、効率的なエディタ活用"

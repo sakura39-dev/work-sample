@@ -1,0 +1,56 @@
+<section id="banners" class="banner-section">
+  <div class="container">
+    <h3 class="works-category-title">Web Banners</h3>
+    
+    <!-- ── バナー一覧のグリッド ── -->
+    <div class="banner-grid">
+      {% for banner in site.data.banners %}
+      <div class="banner-card js-modal-open" 
+           data-title="{{ banner.title }}"
+           data-img="{{ site.baseurl }}/assets/images/{{ banner.img }}"
+           data-target="{{ banner.target }}"
+           data-purpose="{{ banner.purpose }}"
+           data-points="{{ banner.points }}">
+        
+        <div class="banner-thumb-wrapper">
+          <img src="{{ site.baseurl }}/assets/images/{{ banner.img }}" alt="{{ banner.title }}" class="banner-thumb">
+          <div class="banner-hover-mask">
+            <span>詳細を見る</span>
+          </div>
+        </div>
+        <h3 class="banner-title-label">{{ banner.title }}</h3>
+      </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>
+
+<!-- ── 共通モーダル（全バナーで使い回す） ── -->
+<div id="banner-modal" class="modal-overlay" inert>
+  <div class="modal-window">
+    <button class="modal-close" aria-label="閉じる">&times;</button>
+    
+    <div class="modal-content">
+      <!-- 左側：拡大画像 -->
+      <div class="modal-visual">
+        <img id="modal-img" src="" alt="">
+      </div>
+      
+      <!-- 右側：制作意図 -->
+      <div class="modal-info">
+        <h3 id="modal-title"></h3>
+        <dl class="modal-meta">
+          <dt>ターゲット</dt>
+          <dd id="modal-target"></dd>
+          
+          <dt>制作目的</dt>
+          <dd id="modal-purpose"></dd>
+          
+          <dt>デザインの意図・工夫</dt>
+          <dd id="modal-points"></dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</div>
