@@ -1,7 +1,12 @@
 # Web Designer Portfolio
 
-バックエンドエンジニア出身のWebデザイナーによる限定公開ポートフォリオサイトのリポジトリです。
+バックエンドエンジニア出身のWebデザイナーによる限定公開ポートフォリオサイトのリポジトリです。  
 ※本サイトは検索避け（noindex）を設定した限定公開サイトです。
+
+<img width="600" alt="" src="https://github.com/user-attachments/assets/ee322641-1167-460c-8979-0ab2c98bd4d6" />
+
+## 🌐 サイトURL（GitHub Pages）
+https://sakura39-dev.github.io/work-sample
 
 ## 💡 本プロジェクトの目的・こだわり
 ただデザインを作るだけでなく、「その後の開発・運用のしやすさ」を意識したフロントエンドの構築を目指しました。
@@ -12,6 +17,10 @@
   バナーモーダルの開閉制御には、最新のブラウザ標準である `inert` 属性を採用し、スクリーンリーダーやキーボードフォーカスが破綻しないようアクセシビリティを考慮しています。
 - **バニラJSによる軽量なギミック実装:**
   レタッチ写真のBefore/After比較スライダーは、外部ライブラリに依存せず、CSSの `clip-path` と素のJavaScriptのみで自作し、軽量かつサクサク動くUIを実現しました。
+
+  <img width="600" alt="Image" src="https://github.com/user-attachments/assets/8c10aadb-e52f-4f84-b330-f7c29fa90f95" />
+  <img width="600" alt="" src="https://github.com/user-attachments/assets/96978e40-98c6-4ddd-a623-aac4b224f66d" />
+
 
 ## 🛠️ 技術スタック
 - **SSG:** Jekyll
@@ -32,3 +41,9 @@
 
 ## 📝 ライセンス・注意事項
 当リポジトリ内の画像・デザインアセットの無断転載・複製を禁じます。
+
+## 💻 ローカル起動手順
+```zsh
+docker compose build
+docker compose up
+```
